@@ -1,0 +1,18 @@
+<launch>
+ 
+  <!-- Launch the robot in the Gazebo environment and spawn the robot -->
+  
+  <include file="$(find rosbot_gazebo)/launch/assignment2.launch" />
+  <include file="$(find rosbot_bringup)/launch/rosbot_gazebo.launch" />
+   
+
+  <!-- Run the marker publisher node -->
+  <node name="marker_publisher" pkg="aruco_ros" type="marker_publisher" output="screen">
+    <remap from="/image" to="/camera/color/image_raw"/>
+  </node>
+  
+  
+  <include file="$(find rosbot_gazebo)/launch/motion.launch"></include>
+  <include file="$(find rosbot_gazebo)/launch/gmapping.launch"></include>
+  
+</launch>
