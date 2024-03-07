@@ -12,7 +12,7 @@ This repository contains the solution to assignment 2 of the Experimental Roboti
 
 This repository contains an implementation of an assignment where a robot is tasked to navigate through an environment with Aruco markers. The goal is to make the robot move towards specific markers in a predefined order.
 
-![Environment](Resources/environment.png)
+![Environment](Ressources/environment.png)
 
 The robot must follow these behaviors:
 
@@ -117,6 +117,10 @@ The **interfaced_planning_system** launch file orchestrates the execution of var
 
     ```bash
     roslaunch rosplan_planning_system interfaced_planning_system.launch
+After launching this launch file and calling services (as explained in installing and running part), we generat the following plan :
+![plan](Ressources/plan.png)
+
+
 
 - **Gazebo environment setup and robot spawn:**
 Here we created a launch file `assignment2.launch` that sets up the environment. Additionally, we have used the launch file `rosbot_gazebo.launch` in the rosbot_bringup package to spawn the ROSbot in the environment.
@@ -201,7 +205,7 @@ rosservice call /rosplan_plan_dispatcher/dispatch_plan
 
 We should expect that the robot will start moving and performing the task.
 
-![gazebo](Resourcess/virtual-robot.gif)
+![gazebo](Ressources/)
 
 ### Real Robot
 
@@ -225,9 +229,5 @@ rosservice call /rosplan_planner_interface/planning_server
 rosservice call /rosplan_parsing_interface/parse_plan
 rosservice call /rosplan_plan_dispatcher/dispatch_plan
 ```
-
-## Possible Improvements
-
-- Reduce the time for the robot to reach the 4 targets by using better and less complex algorithms.
 
 
