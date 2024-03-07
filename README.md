@@ -139,11 +139,6 @@ We have used the move_base package, which provides an implementation of an actio
 - **Gmapping**
 We have also used the gmapping package, which provides laser-based SLAM (Simultaneous Localization and Mapping), as a ROS node called slam_gmapping. Using slam_gmapping, you can create a 2-D occupancy grid map (like a building floorplan) from laser and pose data collected by a mobile robot.
 
- To install the Gmapping package, we use the following command:
- 
-    ```bash
-    sudo apt-get install ros-noetic-openslam-gmapping
-    ```
 
 * **Marker publisher node**:
 For marker detection, we modified the marker publisher node in the aruco_ros package. The modifications enable the retrieval of marker information ID. This information is published on the following topics:
