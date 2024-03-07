@@ -205,7 +205,8 @@ rosservice call /rosplan_plan_dispatcher/dispatch_plan
 
 We should expect that the robot will start moving and performing the task.
 
-![gazebo](Ressources/recording.mp4)
+![gazebo](Ressources/Recording.gif)
+![gazebo](Ressources/Recording.mp4)
 
 ### Real Robot
 
